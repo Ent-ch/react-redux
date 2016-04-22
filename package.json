@@ -7,7 +7,7 @@
     "url": "https://github.com/callemall/material-ui.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors --host 0.0.0.0",
+    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors",
     "lint": "eslint src && echo \"eslint: no lint errors\""
   },
