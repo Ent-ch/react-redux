@@ -4,6 +4,7 @@ import {deepOrange500, cyan500} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MenuItem } from 'material-ui';
 
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
@@ -21,7 +22,7 @@ lightBaseTheme.appBar = {
 const drawerWidth = 320;
 const muiTheme = getMuiTheme(lightBaseTheme);
 
-class Main extends React.Component {
+class MainLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,15 +38,22 @@ class Main extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div s>
+        <div>
           <AppBar title="My App" onLeftIconButtonTouchTap={this.handleToggle} />
           <Drawer width={drawerWidth} open={this.state.visibleBar} >
             <AppBar title="My App" onLeftIconButtonTouchTap={this.handleToggle} />
+            <MenuItem href='#/'>
+              Home
+            </MenuItem>
+            <MenuItem href="#/sites">
+              Sites
+            </MenuItem>
           </Drawer>
+          {this.props.children}
         </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default Main;
+export default MainLayout;
