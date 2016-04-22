@@ -26,13 +26,10 @@ lightBaseTheme.appBar = {
     height: 50,
   };
 
-
-const drawerWidth = 320,
-      appTitle = '';
-
+const drawerWidth = 320;
 const muiTheme = getMuiTheme(lightBaseTheme);
 
-class Main extends React.Component {
+class MainLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +45,7 @@ class Main extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div s>
+        <div>
           <AppBar title="My App" onLeftIconButtonTouchTap={this.handleToggle} />
           <Drawer width={drawerWidth} open={this.state.visibleBar} >
             <AppBar title="My App" onLeftIconButtonTouchTap={this.handleToggle} />
@@ -85,4 +82,5 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+
+export default MainLayout;
