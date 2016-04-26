@@ -75,8 +75,10 @@ class Main extends React.Component {
                 <ListItem primaryText="Modify" value="/get" />,
               ]}
             />
-
           </Drawer>
+
+          {this.props.children}
+
         </div>
       </MuiThemeProvider>
 

@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import * as Actions from '../../actions/home';
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 
+import 'style!css!./style.css'
+
+
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -17,18 +21,7 @@ class Home extends React.Component {
 
   div() {
     return (
-      <div style={{
-      position: 'relative',
-      boxSizing: 'border-box',
-      minHeight: '1rem',
-      marginBottom: 0,
-      background: '#007fff',
-      border: '1px solid #fff',
-      bordeRadius: '2px',
-      overflow: 'hidden',
-      textAlign: 'center',
-      color: '#fff',
-      }}></div>
+      <div className='index-grid'> Col </div>
     )
   }
 
