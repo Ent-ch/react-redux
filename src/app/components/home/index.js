@@ -27,7 +27,7 @@ class Home extends React.Component {
       bordeRadius: '2px',
       overflow: 'hidden',
       textAlign: 'center',
-      color: '#fff'
+      color: '#fff',
       }}></div>
     )
   }
