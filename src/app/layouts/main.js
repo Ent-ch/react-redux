@@ -53,13 +53,13 @@ class Main extends React.Component {
           <Drawer width={drawerWidth} open={this.state.visibleBar} >
             <AppBar title="My App" onLeftIconButtonTouchTap={this.handleToggle} />
 
-            <ListItem primaryText="Home" leftIcon={<ActionHome />}  value="#/" />
+            <ListItem primaryText="Home" leftIcon={<ActionHome />}  href="#/" />
 
             <ListItem primaryText="Users" leftIcon={<SocialPerson />}
               primaryTogglesNestedList={true}
               nestedItems={[
-                <ListItem primaryText="Create" value="/sites" />,
-                <ListItem primaryText="Modify" value="/get" />,
+                <ListItem primaryText="Create" href="#/sites" />,
+                <ListItem primaryText="Modify" href="#/get" />,
               ]}
             />
             <ListItem primaryText="Roles" leftIcon={<SocialPeople />}
