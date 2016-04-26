@@ -1,17 +1,11 @@
 {
-  "name": "material-ui-example-webpack",
-  "version": "0.15.0-beta.1",
-  "description": "Sample project that uses material-ui",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
-  },
+  "name": "fastlane-admin",
+  "version": "0.0.0",
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors",
     "lint": "eslint src && echo \"eslint: no lint errors\""
   },
-  "private": true,
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-eslint": "^6.0.0",
