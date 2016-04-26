@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import * as Actions from '../../actions/home';
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 
-import 'style!css!./style.css'
-
-
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -16,8 +12,6 @@ class Home extends React.Component {
     const {dispatch} = this.props;
     dispatch(Actions.setInitialState())
   }
-
-
 
   div() {
     return (

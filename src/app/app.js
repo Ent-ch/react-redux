@@ -5,6 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import configureStore from './store/ConfigureStore';
 import { useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
+import '!style!raw!sass!./stylesheets/style.sass';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 window.onload = function() {
