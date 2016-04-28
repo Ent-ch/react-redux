@@ -23,9 +23,10 @@ class Home extends React.Component {
     const [xsSize, smSize, mdSize, lgSize] = [12, 6, 6, 6];
     return (
       <div>
-        <h2><a href="#/">Home</a></h2>
         <Row>
           <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
+            <h2><a href="#/">Home</a></h2>
+
             <h2><a href="#/users">Users</a></h2>
             <a href="#/users/create">Create User</a><br/>
             <a href="#/users/:id/edit">Modify User</a>

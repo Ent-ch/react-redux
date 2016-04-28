@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {Row, Col} from 'react-bootstrap';
 // import * as Actions from '../../actions/index';
 
 class Sites extends React.Component {
@@ -9,9 +10,9 @@ class Sites extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1 style={{textAlign:'center'}}>Sites</h1>
-      </div>
+        <Row>
+          <h1 style={{textAlign:'center'}}>Sites</h1>
+        </Row>
     );
   }
 }

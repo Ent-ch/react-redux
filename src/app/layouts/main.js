@@ -83,8 +83,10 @@ class Main extends React.Component {
 
           </div>
         </div>
-        <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height, 'marginTop': '-20px'}}>
-          {this.props.children}
+        <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height}}>
+          <div>
+            {this.props.children}
+          </div>
         </div>
         <div className={this.state.showPopup ? "popup":"hidden"}>
             This is popup
