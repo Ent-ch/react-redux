@@ -1,6 +1,6 @@
 import React from 'react';
 import Router, { Link, RouteHandler } from "react-router";
-
+import {Row, Col} from 'react-bootstrap';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
 import $ from "jquery";
 import classNames from "classnames";
@@ -11,29 +11,36 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visibleBar: true,
+      showPopup: false
     }
   }
 
-  handleToggle = () => {
-    this.setState({visibleBar: !this.state.visibleBar});
+  handleTogglePopup = () => {
+    this.setState({showPopup: !this.state.showPopup});
   }
 
   render() {
     return (
       <div id="wrapper" className="content">
 
-        <Navbar style={ {margin: 0} }>
+        <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
+              <div className="rubick" onClick={this.handleTogglePopup}>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
               <a href="#">Admin</a>
             </Navbar.Brand>
           </Navbar.Header>
         </Navbar>
 
-        <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height}}>
-          Content
+        <div className={this.state.showPopup ? "popup":"hidden"}>
+            This is popup
         </div>
+
+        <Col mdOffset={2} md={10}>
+          {this.props.children}
+        </Col>
 
       </div>
 
