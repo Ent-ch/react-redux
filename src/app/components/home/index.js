@@ -13,12 +13,6 @@ class Home extends React.Component {
     dispatch(Actions.setInitialState())
   }
 
-  div() {
-    return (
-      <div className='index-grid'> Col </div>
-    )
-  }
-
   render() {
     const [xsSize, smSize, mdSize, lgSize] = [12, 6, 6, 6];
     return (
