@@ -24,7 +24,7 @@ class Main extends React.Component {
       <div id="wrapper" className="content">
 
         <Navbar>
-          <Navbar.Header>
+          <Navbar.Header style={{paddingLeft:'5rem'}}>
             <Navbar.Brand>
               <div className="rubick" onClick={this.handleTogglePopup}>
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -38,7 +38,7 @@ class Main extends React.Component {
             This is popup
         </div>
 
-        <Col mdOffset={2} md={10}>
+        <Col mdOffset={2} md={10} lg={10}>
           {this.props.children}
         </Col>
 
