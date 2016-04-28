@@ -4,44 +4,19 @@ import {Row, Col} from 'react-bootstrap';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
 import classNames from "classnames";
 import FontAwesome from 'react-fontawesome';
-
-
-class MenuContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      uiElementsCollapsed: true,
-    }
-  }
-
-  render() {
-    return (
-      <li className={classNames({'active': !this.state.uiElementsCollapsed})}>
-        <a href="javascript:void(0)" onClick={ () => { this.setState({uiElementsCollapsed: !this.state.uiElementsCollapsed}); return false; } }>
-          <FontAwesome name={this.props.icon} />
-            &nbsp; {this.props.title}
-          <span className="fa arrow"></span>
-        </a>
-        <ul className={classNames({'nav nav-second-level': true, 'collapse': this.state.uiElementsCollapsed})}>
-          <NavItem eventKey={1} href={this.props.createLink}>Create</NavItem>
-          <NavItem eventKey={1} href={this.props.modifyLink}>Modify</NavItem>
-        </ul>
-      </li>
-    )
-  }
-}
+import MenuContainer from '../components/_shared/menu_container';
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visibleBar: true,
+      showPopup: false
     }
   }
 
-  handleToggle = () => {
-    this.setState({visibleBar: !this.state.visibleBar});
-  }
+  togglePopup = () => {
+    this.setState({showPopup:!this.state.showPopup})
+  };
 
   render() {
     return (
@@ -50,7 +25,7 @@ class Main extends React.Component {
         <Navbar style={ { 'marginBottom': '0px' } }>
           <Navbar.Header style={{paddingLeft:'5rem'}}>
             <Navbar.Brand>
-              <div className="rubick" onClick={this.handleTogglePopup}>
+              <div className="rubick" onClick={this.togglePopup}>
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
               <a href="#">Admin</a>
@@ -88,7 +63,7 @@ class Main extends React.Component {
             {this.props.children}
           </div>
         </div>
-        <div className={this.state.showPopup ? "popup":"hidden"}>
+        <div className={this.state.showPopup ? "popup fade-in":"hidden"}>
             This is popup
         </div>
 
