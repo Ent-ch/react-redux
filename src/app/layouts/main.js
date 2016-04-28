@@ -47,7 +47,7 @@ class Main extends React.Component {
     return (
       <div id="wrapper" className="content">
 
-        <Navbar>
+        <Navbar style={ { 'marginBottom': '0px' } }>
           <Navbar.Header style={{paddingLeft:'5rem'}}>
             <Navbar.Brand>
               <div className="rubick" onClick={this.handleTogglePopup}>
@@ -58,7 +58,7 @@ class Main extends React.Component {
           </Navbar.Header>
         </Navbar>
 
-        <div className="navbar-default sidebar" style={ { 'marginTop': '20px' } } role="navigation">
+        <div className="navbar-default sidebar" role="navigation">
           <div className="sidebar-nav navbar-collapse">
 
             <Nav className="nav in" id="side-menu">
@@ -83,8 +83,7 @@ class Main extends React.Component {
 
           </div>
         </div>
-        <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height}}>
-          Content
+        <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height, 'marginTop': '-20px'}}>
           {this.props.children}
         </div>
         <div className={this.state.showPopup ? "popup":"hidden"}>
