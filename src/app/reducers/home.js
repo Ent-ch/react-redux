@@ -1,7 +1,7 @@
 import { SET_INITIAL_STATE } from '../actions/home';
 
 let initialState = {
-  success: false
+  success: false,
 };
 
 module.exports = (state = initialState, action) => {
