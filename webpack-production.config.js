@@ -3,6 +3,7 @@ const path = require('path');
 const buildPath = path.resolve(__dirname, 'build');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
   entry: [path.join(__dirname, '/src/app/app.js')],
@@ -32,6 +33,9 @@ const config = {
     new TransferWebpackPlugin([
       {from: 'www'},
     ], path.resolve(__dirname,"src")),
+
+    new ExtractTextPlugin("styles.css"),
+
   ],
   module: {
     loaders: [
@@ -42,7 +46,7 @@ const config = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules',
+        loader: ExtractTextPlugin.extract("style", "css-loader?modules&importLoaders=1"),
         include: /flexboxgrid/,
       },
 
