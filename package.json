@@ -33,11 +33,11 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "flexboxgrid": "^6.3.0",
-    "material-ui": "^0.15.0-beta.1",
+    "classnames": "^2.2.4",
+    "jquery": "^2.2.3",
     "react": "^15.0.1",
+    "react-bootstrap": "^0.29.2",
     "react-dom": "^15.0.1",
-    "react-flexbox-grid": "^0.9.6",
     "react-redux": "^4.4.5",
     "react-router": "^2.3.0",
     "react-tap-event-plugin": "^1.0.0",
