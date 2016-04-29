@@ -41,7 +41,7 @@ const config = {
       {from: 'www'},
     ], path.resolve(__dirname, "src")),
 
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("styles.css", {allChunks: true}),
   ],
   module: {
     loaders: [
@@ -51,12 +51,13 @@ const config = {
         loaders: ['react-hot', 'babel-loader'], //react-hot is like browser sync and babel loads jsx and es6-7
         exclude: [nodeModulesPath],
       },
+      // {
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract("style", "css"),
+      // },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "css-loader?modules&importLoaders=1"),
-        // loader: 'style!css?modules',
-        // loader: 'style!css',
-        include: /flexboxgrid/,
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader"),
       },
     ],
   },
