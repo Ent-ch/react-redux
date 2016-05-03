@@ -1,7 +1,7 @@
 import React from 'react';
 import Router, { Link, RouteHandler } from "react-router";
 import {Row, Col} from 'react-bootstrap';
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar, Fade} from "react-bootstrap";
 import classNames from "classnames";
 import FontAwesome from 'react-fontawesome';
 import MenuContainer from '../components/_shared/menu_container';
@@ -44,7 +44,7 @@ class Main extends React.Component {
               <MenuContainer title='Sites' icon='list' />
               <MenuContainer title='Users' icon='user' />
               <MenuContainer title='Roles' icon='users' />
-              <MenuContainer title='Accounts' icon='sliders' />
+              <MenuContainer title='Accounts' icon='sliders' createLink="#/accounts/new" modifyLink="#/accounts" />
               <NavItem eventKey={1} href="#/sites">
                 <FontAwesome name='wrench' />
                 &nbsp; Global Options
