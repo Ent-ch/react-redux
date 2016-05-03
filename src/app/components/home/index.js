@@ -18,9 +18,8 @@ class Home extends React.Component {
     return (
       <div>
         <Row>
+          <h2><a href="#/">Home</a></h2>
           <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
-            <h2><a href="#/">Home</a></h2>
-
             <h2><a href="#/users">Users</a></h2>
             <a href="#/users/create">Create User</a><br/>
             <a href="#/users/:id/edit">Modify User</a>
@@ -39,8 +38,8 @@ class Home extends React.Component {
           </Col>
           <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
             <h2><a href="#/accounts">Accounts</a></h2>
-            <a href="#/accounts/create">Create Account</a><br/>
-            <a href="#/accounts/:id/edit">Modify Account</a>
+            <a href="#/accounts/new">Create Account</a><br/>
+            <a href="#/accounts/:id">Modify Account</a>
           </Col>
         </Row><br/><br/>
         <Row>
