@@ -1,7 +1,7 @@
 import React from 'react';
 import Router, { Link, RouteHandler } from "react-router";
 import {Row, Col} from 'react-bootstrap';
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar, Image} from "react-bootstrap";
 import classNames from "classnames";
 import FontAwesome from 'react-fontawesome';
 import MenuContainer from '../components/_shared/menu_container';
@@ -31,6 +31,12 @@ class Main extends React.Component {
               <a href="#">Admin</a>
             </Navbar.Brand>
           </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              <Image src="/assets/thumbnail.png" circle thumbnail style={ { 'height': '50px' } } pullRight/>
+            </Nav>
+          </Navbar.Collapse>
+
         </Navbar>
 
         <div className="navbar-default sidebar" role="navigation">

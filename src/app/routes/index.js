@@ -1,5 +1,4 @@
 import React from 'react';
-import Clear from '../layouts/clear';
 import MainLayout from '../layouts/main';
 import SignInLayout from '../layouts/sign_in';
 import { Router, Route, IndexRoute } from 'react-router';
