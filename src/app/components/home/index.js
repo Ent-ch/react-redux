@@ -43,7 +43,7 @@ class Home extends React.Component {
           <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
             <h2><a href="#/accounts">Accounts</a></h2>
             <a href="#/accounts/new">Create Account</a><br/>
-            <a href="#/accounts/:id">Modify Account</a>
+            <a href="#/accounts">Modify Account</a>
           </Col>
         </Row><br/><br/>
         <Row>

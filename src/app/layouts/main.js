@@ -33,7 +33,7 @@ class Main extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight className="avatar">
-              <Image src="/assets/thumbnail.png" circle thumbnail />
+              <Image src="/assets/user.png" circle thumbnail />
             </Nav>
           </Navbar.Collapse>
 
