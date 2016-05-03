@@ -18,7 +18,11 @@ class Home extends React.Component {
     return (
       <div>
         <Row>
-          <h2><a href="#/">Home</a></h2>
+          <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
+            <h2><a href="#/">Home</a></h2>
+          </Col>
+        </Row>
+        <Row>
           <Col xs={xsSize} sm={smSize} md={mdSize} lg={lgSize}>
             <h2><a href="#/users">Users</a></h2>
             <a href="#/users/create">Create User</a><br/>
