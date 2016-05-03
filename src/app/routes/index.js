@@ -7,18 +7,22 @@ import Accounts from '../components/accounts/list';
 import NewAccount from '../components/accounts/new_account';
 import NotFound from '../components/_shared/not_found';
 
+function checkLogin() {
+  console.log('check');
+}
+
 module.exports = (
   <Router>
 
     <Route path="sign-in" component={SignInLayout} />
 
-    <Route path="/" component={MainLayout}>
+    <Route path="/" component={MainLayout} onEnter={checkLogin}>
       <IndexRoute name='Home' component={Home} />
-      <Route name="Sites" component={Sites} path="/sites" />
       <Route name="Accounts" component={Accounts} path="/accounts" />
       <Route name="NewAccount" component={NewAccount} path="/accounts/new" />
-      <Route path="*" component={NotFound} />
     </Route>
+
+    <Route path="*" component={NotFound} />
 
   </Router>
 );
