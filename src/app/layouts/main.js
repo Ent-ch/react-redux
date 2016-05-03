@@ -32,8 +32,8 @@ class Main extends React.Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav pullRight>
-              <Image src="/assets/thumbnail.png" circle thumbnail style={ { 'height': '50px' } } pullRight/>
+            <Nav pullRight className="avatar">
+              <Image src="/assets/thumbnail.png" circle thumbnail />
             </Nav>
           </Navbar.Collapse>
 
